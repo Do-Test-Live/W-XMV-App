@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="images/favicon.png">
+    <title>Land</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&amp;display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="css/fakeLoader.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .zoom_image {
+            overflow: hidden;
+            max-width: 100%;
+            margin: 0 auto;
+            border-radius: 0.5rem;
+            cursor: zoom-in;
+        }
+
+        .zoom_image.zoom_mode_active {
+            cursor: zoom-out;
+        }
+
+        .zoom_image img {
+            max-width: 100%;
+            width: 100%;
+            height: auto;
+            transition: transform 200ms ease-out;
+        }
+    </style>
+</head>
+<body style="background-image: linear-gradient(#c5ecf6, #00acd7);">
+
+<!-- fakeloader -->
+<div class="fakeLoader"></div>
+<!-- end fakeloader -->
+
+<!-- navbar -->
+<div class="navbar navbar-home">
+    <!--<div class="left">
+        <a href="#menu" class="link menu-link"><i class="icon ion-ios-menu"></i></a>
+    </div>-->
+    <div class="right">
+        <a href="profile.html" class="link"><img src="img/img_4.png" alt=""></a>
+    </div>
+</div>
+<!-- end navbar -->
+
+<!-- sidebar -->
+<!--<div class="side-overlay"></div>
+<div id="menu" class="panel sidebar" role="navigation">
+
+    &lt;!&ndash; separator &ndash;&gt;
+    <div class="separator-large"></div>
+    &lt;!&ndash; end separator &ndash;&gt;
+
+    <div class="list-view list-separate-two list-colored">
+        <ul>
+            <li>
+                <a href="index-2.html" class="list-item">
+                    <div class="list-media">
+                        <i class="icon ion-ios-home bg-blue"></i>
+                    </div>
+                    <div class="list-label">
+                        <div class="list-title">Home</div>
+                        <div class="list-after"><i class="icon ion-ios-arrow-forward"></i></div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="features.html" class="list-item">
+                    <div class="list-media">
+                        <i class="icon ion-ios-star bg-red"></i>
+                    </div>
+                    <div class="list-label">
+                        <div class="list-title">Features</div>
+                        <div class="list-after"><i class="icon ion-ios-arrow-forward"></i></div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="pages.html" class="list-item">
+                    <div class="list-media">
+                        <i class="icon ion-ios-browsers bg-green"></i>
+                    </div>
+                    <div class="list-label">
+                        <div class="list-title">Pages</div>
+                        <div class="list-after"><i class="icon ion-ios-arrow-forward"></i></div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="apps.html" class="list-item">
+                    <div class="list-media">
+                        <i class="icon ion-ios-apps bg-yellow"></i>
+                    </div>
+                    <div class="list-label">
+                        <div class="list-title">Apps</div>
+                        <div class="list-after"><i class="icon ion-ios-arrow-forward"></i></div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="sign-in.html" class="list-item">
+                    <div class="list-media">
+                        <i class="icon ion-ios-log-in bg-purple"></i>
+                    </div>
+                    <div class="list-label">
+                        <div class="list-title">Sign In</div>
+                        <div class="list-after"><i class="icon ion-ios-arrow-forward"></i></div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="settings.html" class="list-item">
+                    <div class="list-media">
+                        <i class="icon ion-ios-settings bg-orange"></i>
+                    </div>
+                    <div class="list-label">
+                        <div class="list-title">Settings</div>
+                        <div class="list-after"><i class="icon ion-ios-arrow-forward"></i></div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    &lt;!&ndash; separator &ndash;&gt;
+    <div class="separator-large"></div>
+    &lt;!&ndash; end separator &ndash;&gt;
+
+    <div class="list-view list-separate-two list-colored">
+        <ul>
+            <li>
+                <a href="about-us.html" class="list-item">
+                    <div class="list-media">
+                        <i class="icon ion-ios-information-circle bg-lime"></i>
+                    </div>
+                    <div class="list-label">
+                        <div class="list-title">About</div>
+                        <div class="list-after"><i class="icon ion-ios-arrow-forward"></i></div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="privacy.html" class="list-item">
+                    <div class="list-media">
+                        <i class="icon ion-ios-lock bg-blue"></i>
+                    </div>
+                    <div class="list-label">
+                        <div class="list-title">Privacy</div>
+                        <div class="list-after"><i class="icon ion-ios-arrow-forward"></i></div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="list-item">
+                    <div class="list-media">
+                        <i class="icon ion-ios-power bg-red"></i>
+                    </div>
+                    <div class="list-label">
+                        <div class="list-title">Logout</div>
+                        <div class="list-after"><i class="icon ion-ios-arrow-forward"></i></div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    &lt;!&ndash; separator &ndash;&gt;
+    <div class="separator-large"></div>
+    &lt;!&ndash; end separator &ndash;&gt;
+
+</div>-->
+<!-- end sidebar -->
+
+<!-- page wrapper -->
+<div class="page-wrapper d-flex justify-content-center align-items-center" id="map">
+    <div class="container my-3">
+        <div class="row">
+            <div class="col-12">
+                <div class="img">
+                    <div class="zoom_image">
+                        <img src="images/land.png" alt="Land" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end page wrapper -->
+
+<!-- toolbar bottom -->
+<div class="toolbar">
+    <div class="container">
+        <ul class="toolbar-bottom toolbar-wrap">
+            <li class="toolbar-item">
+                <a href="index.html" class="toolbar-link toolbar-link-active">
+                    <i class="icon ion-ios-home"></i>
+                </a>
+            </li>
+            <li class="toolbar-item">
+                <a href="#" class="toolbar-link">
+                    <i class="icon ion-ios-star"></i>
+                </a>
+            </li>
+            <li class="toolbar-item">
+                <a href="#" class="toolbar-link">
+                    <i class="icon ion-ios-browsers"></i>
+                </a>
+            </li>
+            <li class="toolbar-item">
+                <a href="profile.html" class="toolbar-link">
+                    <i class="icon ion-ios-person"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- end toolbar bottom -->
+
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/fakeLoader.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/jquery.big-slide.js"></script>
+<script src="js/main.js"></script>
+<script>
+    let isActiveMode = false;
+    $(".zoom_image")
+        .on("click", function () {
+            (isActiveMode = !isActiveMode)
+                ? ($(this).addClass("zoom_mode_active"),
+                    $(window).width() > 767
+                        ? $(this).children("img").css({transform: "scale(2)"})
+                        : $(this).children("img").css({transform: "scale(5)"}))
+                : ($(this).removeClass("zoom_mode_active"),
+                    $(this).children("img").css({transform: "scale(1)"}));
+        })
+        .on("mousemove", function (e) {
+            $(this)
+                .children("img")
+                .css({
+                    "transform-origin":
+                        ((e.pageX - $(this).offset().left) / $(this).width()) * 100 +
+                        "% " +
+                        ((e.pageY - $(this).offset().top) / $(this).height()) * 100 +
+                        "%"
+                });
+        });
+
+
+    let body = document.body,
+        html = document.documentElement;
+
+    let height = Math.max( body.scrollHeight, body.offsetHeight,
+        html.clientHeight, html.scrollHeight, html.offsetHeight );
+
+    document.getElementById("map").style.height=height+'px';
+</script>
+</body>
+
+</html>
