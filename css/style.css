@@ -395,7 +395,7 @@ textarea {
 
 /* content box */
 .content-box {
-    background: #fe2775;
+    background: #013d98;
     padding: 15px;
     border-radius: 18px;
 }
@@ -1024,11 +1024,11 @@ textarea {
 }
 
 .toolbar-link.toolbar-link-active {
-    color: #fe2775;
+    color: #79aeff;
 }
 
 .toolbar-link:hover {
-    color: #fe2775;
+    color: #79aeff;
 }
 
 .toolbar-variant {
@@ -1396,7 +1396,7 @@ a.button-outline:hover {
 
 .card-date {
     margin-top: 10px;
-    color: #fe2775;
+    color: #ffffff;
     font-weight: 500;
     font-size: 13px;
 }
@@ -1406,7 +1406,7 @@ a.button-outline:hover {
 }
 
 .card-highlight {
-    background: #fe2775;
+    background: #013d98;
     border: 0;
 }
 
