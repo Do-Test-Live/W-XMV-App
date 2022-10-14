@@ -1024,7 +1024,7 @@ textarea {
 }
 
 .toolbar-link.toolbar-link-active {
-    color: #79aeff;
+    border-bottom: 2px solid #79aeff;
 }
 
 .toolbar-link:hover {
