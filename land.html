@@ -40,13 +40,20 @@
     <div class="container my-3">
         <div class="row">
             <div class="col-12 image_back" id="map_section">
-                <a href="#" class="roadmap-btn-p-4" id="button-1"><img src="img/button-bg.png" onclick="image_change(1)"
-                                                                       style="height: 60px; width: 60px;"></a>
-                <a href="#" class="roadmap-location-1" id="button-location-1" style="display: none;"><img
-                        src="img/location.png" style="height: 60px; width: 60px;"></a>
-                <a href="1x1.html" class="roadmap-land-1" id="button-land-1" style="display: none;"><img src="img/land1.png"
-                                                                                                  id="info"
-                                                                                                  style="height: 60px; width: 60px;"></a>
+                <a href="#" class="roadmap-btn-p-4" id="button-1"><img src="img/button-bg.png"
+                                                                       style="height: 5px; width: 5px;"></a>
+
+                <a href="#" class="roadmap-btn-p-5" id="button-2"><img src="img/button-bg.png"
+                                                                       style="height: 5px; width: 5px;"></a>
+
+                <a href="#" class="roadmap-btn-p-6" id="button-3"><img src="img/button-bg.png"
+                                                                       style="height: 5px; width: 5px;"></a>
+
+                <a href="#" class="roadmap-btn-p-7" id="button-4"><img src="img/button-bg.png"
+                                                                       style="height: 5px; width: 5px;"></a>
+
+                <a href="#" class="roadmap-btn-p-8" id="button-5"><img src="img/button-bg.png" onclick="image_change(1)"
+                                                                       style="height: 20px; width: 20px;"></a>
 
                 <div class="popup" role="alert">
                     <div class="popup-container">
@@ -54,6 +61,27 @@
                         <p>Regular plots are the entry level form of land in the game. These plots come with the
                             Sir/Lady title and have traits that are unveiled as the game world unfolds. This might
                             include campsites, NPC houses, resource deposits, monster spawns and more!</p>
+                    </div>
+                </div>
+
+                <div class="popup1" id="popup1" role="alert">
+                    <div class="popup-container">
+                        <a href="#0" class="popup-close img-replace">Close</a>
+                        <p>This is the second popup </p>
+                    </div>
+                </div>
+
+                <div class="popup1" id="popup2" role="alert">
+                    <div class="popup-container">
+                        <a href="#0" class="popup-close img-replace">Close</a>
+                        <p>This is the third popup </p>
+                    </div>
+                </div>
+
+                <div class="popup1" id="popup3" role="alert">
+                    <div class="popup-container">
+                        <a href="#0" class="popup-close img-replace">Close</a>
+                        <p>This is the fourth popup </p>
                     </div>
                 </div>
 
@@ -119,16 +147,14 @@
 
     function image_change(value) {
         document.getElementById("map_section").className = 'col-12 image_back-' + value;
-        document.getElementById("button-" + value).style.display = "none";
-        document.getElementById("button-location-" + value).style.display = "block";
-        document.getElementById("button-land-" + value).style.display = "block";
+        document.getElementById("button-5").style.display = 'none';
     }
 </script>
 
 <script>
     jQuery(document).ready(function ($) {
         //open popup
-        $('.roadmap-location-1').on('click', function (event) {
+        $('.roadmap-btn-p-4').on('click', function (event) {
             event.preventDefault();
             $('.popup').addClass('is-visible');
         });
@@ -144,6 +170,78 @@
         $(document).keyup(function (event) {
             if (event.which == '27') {
                 $('.popup').removeClass('is-visible');
+            }
+        });
+    });
+</script>
+
+<script>
+    jQuery(document).ready(function ($) {
+        //open popup
+        $('#button-2').on('click', function (event) {
+            event.preventDefault();
+            $('#popup1').addClass('is-visible');
+        });
+
+        //close popup
+        $('#popup1').on('click', function (event) {
+            if ($(event.target).is('.popup-close') || $(event.target).is('#popup1')) {
+                event.preventDefault();
+                $(this).removeClass('is-visible');
+            }
+        });
+        //close popup when clicking the esc keyboard button
+        $(document).keyup(function (event) {
+            if (event.which == '27') {
+                $('#popup1').removeClass('is-visible');
+            }
+        });
+    });
+</script>
+
+<script>
+    jQuery(document).ready(function ($) {
+        //open popup
+        $('#button-3').on('click', function (event) {
+            event.preventDefault();
+            $('#popup2').addClass('is-visible');
+        });
+
+        //close popup
+        $('#popup2').on('click', function (event) {
+            if ($(event.target).is('.popup-close') || $(event.target).is('#popup1')) {
+                event.preventDefault();
+                $(this).removeClass('is-visible');
+            }
+        });
+        //close popup when clicking the esc keyboard button
+        $(document).keyup(function (event) {
+            if (event.which == '27') {
+                $('#popup2').removeClass('is-visible');
+            }
+        });
+    });
+</script>
+
+<script>
+    jQuery(document).ready(function ($) {
+        //open popup
+        $('#button-4').on('click', function (event) {
+            event.preventDefault();
+            $('#popup3').addClass('is-visible');
+        });
+
+        //close popup
+        $('#popup3').on('click', function (event) {
+            if ($(event.target).is('.popup-close') || $(event.target).is('#popup1')) {
+                event.preventDefault();
+                $(this).removeClass('is-visible');
+            }
+        });
+        //close popup when clicking the esc keyboard button
+        $(document).keyup(function (event) {
+            if (event.which == '27') {
+                $('#popup3').removeClass('is-visible');
             }
         });
     });

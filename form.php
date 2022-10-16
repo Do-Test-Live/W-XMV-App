@@ -20,6 +20,22 @@
 </head>
 <body>
 
+<?php
+$result = 2;
+include ("config/dbconfig.php");
+if (isset($_POST['submit'])){
+    $name = mysqli_real_escape_string($con, $_POST['name']);
+    $email = mysqli_real_escape_string($con, $_POST['email']);
+    $number = mysqli_real_escape_string($con, $_POST['number']);
+    $query = $con->query("INSERT INTO `contact`(`name`, `email`, `contact_no`) VALUES ('$name','$email','$number')");
+    if($query){
+        $result = 1;
+    }else{
+        $result = 0;
+    }
+}
+?>
+
 <!-- fakeloader -->
 <div class="fakeLoader"></div>
 <!-- end fakeloader -->
@@ -44,6 +60,27 @@
     <!-- separator -->
     <div class="separator-large"></div>
     <!-- end separator -->
+<?php
+if($result == 1){
+?>
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>Thank You </strong> Your data is successfully submitted to us!
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <?php
+}elseif ($result == 0){
+    ?>
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <strong>Sorry! </strong> Something went wrong. Please try again later.
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <?php
+}
+    ?>
 
     <!-- intro app -->
     <div class="intro-app">
@@ -67,20 +104,20 @@
     <!-- sign up -->
     <div class="sign-up">
         <div class="container">
-            <form class="form-fill">
+            <form class="form-fill" action="" method="post">
                 <div class="form-wrapper">
                     <div class="input-wrap">
-                        <input type="text" placeholder="Name">
+                        <input type="text" name="name" placeholder="Name">
                     </div>
                     <div class="input-wrap">
-                        <input type="email" placeholder="Email">
+                        <input type="email" name="email" placeholder="Email">
                     </div>
                     <div class="input-wrap">
-                        <input type="text" placeholder="Contact Number">
+                        <input type="text" name="number" placeholder="Contact Number">
                     </div>
                 </div>
                 <div class="button-default">
-                    <button class="button">Submit</button>
+                    <button class="button" name="submit">Submit</button>
                 </div>
             </form>
 

@@ -2523,7 +2523,22 @@ margin-bottom: -35px;
 
 }
 
-.popup.is-visible {
+.popup1 {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    z-index: 1000;
+    width: 100%;
+    background-color: rgba(94, 110, 141, 0.9);
+    opacity: 0;
+    visibility: hidden;
+    transition:500ms all;
+
+}
+
+.popup.is-visible,
+.popup1.is-visible {
     opacity: 1;
     visibility: visible;
     transition:1s all;
@@ -2601,24 +2616,52 @@ margin-bottom: -35px;
 }
 
 .image_back{
-    height: 380px;
-    width: 50%;
+    height: 250px;
+    width: 100%;
     background: url("../img/hk.jpg") no-repeat;
     background-size: cover;
     position: relative;
 }
 
 .image_back-1{
-    height: 380px;
-    width: 50%;
-    background: url("../img/Map.png") no-repeat;
+    height: 250px;
+    width: 100%;
+    background: url(../img/Map.png) no-repeat;
     background-size: cover;
     position: relative;
 }
 .roadmap-btn-p-4{
     position: absolute;
-    top: 20%;
-    left: 30%;
+    top: 22%;
+    left: 32%;
+    border-radius: 15px;
+}
+
+.roadmap-btn-p-5{
+    position: absolute;
+    top: 13%;
+    left: 52%;
+    border-radius: 15px;
+}
+
+.roadmap-btn-p-6{
+    position: absolute;
+    top: 30%;
+    left: 67%;
+    border-radius: 15px;
+}
+
+.roadmap-btn-p-7{
+    position: absolute;
+    top: 40%;
+    left: 37%;
+    border-radius: 15px;
+}
+
+.roadmap-btn-p-8{
+    position: absolute;
+    top: 30%;
+    left: 20%;
     border-radius: 15px;
 }
 
