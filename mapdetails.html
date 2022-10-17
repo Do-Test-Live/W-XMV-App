@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="img/favicon.png">
+    <title>X Moment World</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&amp;display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="css/fakeLoader.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- fakeloader -->
+<div class="fakeLoader"></div>
+<!-- end fakeloader -->
+
+<!-- navbar -->
+<div class="navbar">
+    <div class="left">
+        <a href="land.html" class="link link-back"><i class="icon ion-ios-arrow-back"></i></a>
+    </div>
+    <div class="title">
+        Details
+    </div>
+    <div class="right">
+
+    </div>
+</div>
+<!-- end navbar -->
+
+<!-- page wrapper -->
+<div class="page-wrapper d-flex justify-content-center align-items-center" id="map">
+    <div class="container my-3">
+        <div class="row">
+            <div class="col-12">
+                <img src="img/mapdetails.jpeg">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end page wrapper -->
+
+<!-- separator -->
+<div class="separator-large"></div>
+<!-- end separator -->
+<!-- separator -->
+<div class="separator-large"></div>
+<!-- end separator -->
+
+
+<!-- toolbar bottom -->
+<div class="toolbar">
+    <div class="container">
+        <ul class="toolbar-bottom toolbar-wrap">
+            <li class="toolbar-item">
+                <a href="index.html" class="toolbar-link">
+                    <img src="img/home-1.png" style="height: 22px;">
+                </a>
+            </li>
+            <li class="toolbar-item">
+                <a href="land.html" class="toolbar-link toolbar-link-active">
+                    <img src="img/map-1.png" style="height: 22px;">
+                </a>
+            </li>
+            <li class="toolbar-item">
+                <a href="marketplace.html" class="toolbar-link">
+                    <img src="img/market-1.png" style="height: 22px;">
+                </a>
+            </li>
+            <li class="toolbar-item">
+                <a href="profile.html" class="toolbar-link">
+                    <img src="img/profile-1.png" style="height: 22px;">
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- end toolbar bottom -->
+
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/fakeLoader.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/jquery.big-slide.js"></script>
+<script src="js/main.js"></script>
+
+<script>
+
+    let body = document.body,
+        html = document.documentElement;
+
+    let height = Math.max(body.scrollHeight, body.offsetHeight,
+        html.clientHeight, html.scrollHeight, html.offsetHeight);
+
+    document.getElementById("map").style.height = height + 'px';
+
+    function image_change(value) {
+        document.getElementById("map_section").className = 'col-12 image_back-' + value;
+        document.getElementById("button-" + value).style.display = "none";
+        document.getElementById("button-location-" + value).style.display = "block";
+        document.getElementById("button-land-" + value).style.display = "block";
+    }
+</script>
+
+</body>
+
+</html>

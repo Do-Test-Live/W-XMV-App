@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="css/swiper.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body style="background-image: url('img/bg.jpg'); background-position: center; background-repeat: no-repeat; background-size: cover;">
 
 <!-- fakeloader -->
 <div class="fakeLoader"></div>
@@ -41,16 +41,22 @@
         <div class="row">
             <div class="col-12 image_back" id="map_section">
                 <a href="#" class="roadmap-btn-p-4" id="button-1"><img src="img/button-bg.png"
-                                                                       style="height: 5px; width: 5px;"></a>
+                                                                       style="height: 20px; width: 20px;"></a>
 
                 <a href="#" class="roadmap-btn-p-5" id="button-2"><img src="img/button-bg.png"
-                                                                       style="height: 5px; width: 5px;"></a>
+                                                                       style="height: 20px; width: 20px;"></a>
 
                 <a href="#" class="roadmap-btn-p-6" id="button-3"><img src="img/button-bg.png"
-                                                                       style="height: 5px; width: 5px;"></a>
+                                                                       style="height: 20px; width: 20px;"></a>
 
                 <a href="#" class="roadmap-btn-p-7" id="button-4"><img src="img/button-bg.png"
-                                                                       style="height: 5px; width: 5px;"></a>
+                                                                       style="height: 20px; width: 20px;"></a>
+
+                <a href="1x1.html" class="roadmap-btn-p-9" id="button-6" style="display: none;"><img src="img/button-bg.png"
+                                                                       style="height: 40px; width: 40px;"></a>
+
+                <a href="1x1.html" class="roadmap-btn-p-10" id="button-7" style="display: none;" ><img src="img/button-bg.png"
+                                                                                                     style="height: 40px; width: 40px;"></a>
 
                 <a href="#" class="roadmap-btn-p-8" id="button-5"><img src="img/button-bg.png" onclick="image_change(1)"
                                                                        style="height: 20px; width: 20px;"></a>
@@ -148,6 +154,8 @@
     function image_change(value) {
         document.getElementById("map_section").className = 'col-12 image_back-' + value;
         document.getElementById("button-5").style.display = 'none';
+        document.getElementById("button-6").style.display = 'block';
+        document.getElementById("button-7").style.display = 'block';
     }
 </script>
 
