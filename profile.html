@@ -77,7 +77,33 @@
 
             <div class="profile-button">
                 <div class="row">
+                    <div class="col-6">
                         <a href="form.php" class="button button-outline">Register</a>
+                    </div>
+                    <div class="col-6">
+                        <a href="#" class="button button-outline" id="new_button">屬性</a>
+                    </div>
+
+                </div>
+                <div class="popup" role="alert">
+                    <div class="popup-container">
+                        <a href="#0" class="popup-close img-replace">Close</a>
+                        <p>
+                            個性：ESTP</br>
+                            HP: 100/100</br>
+                            MP: 100/100</br>
+                            智力：95/100</br>
+                            攻擊力：93/100</br>
+                            防衛力：88/100</br>
+                            領導力：98/100</br>
+                            財商 FQ：97/100</br>
+                            情商 EQ：90/100</br>
+                            逆商 AQ : 90/100</br>
+                            人脈動員力：96/100</br>
+                            交際溝通力：99/100</br>
+                            學習能力：99/100
+                        </p>
+                    </div>
                 </div>
             </div>
 
@@ -232,6 +258,29 @@
 <script src="js/fakeLoader.js"></script>
 <script src="js/swiper.min.js"></script>
 <script src="js/main.js"></script>
+<script>
+    jQuery(document).ready(function ($) {
+        //open popup
+        $('#new_button').on('click', function (event) {
+            event.preventDefault();
+            $('.popup').addClass('is-visible');
+        });
+
+        //close popup
+        $('.popup').on('click', function (event) {
+            if ($(event.target).is('.popup-close') || $(event.target).is('.popup')) {
+                event.preventDefault();
+                $(this).removeClass('is-visible');
+            }
+        });
+        //close popup when clicking the esc keyboard button
+        $(document).keyup(function (event) {
+            if (event.which == '27') {
+                $('.popup').removeClass('is-visible');
+            }
+        });
+    });
+</script>
 
 </body>
 
