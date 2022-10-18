@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (!isset($_SESSION['id'])){
+if (!isset($_SESSION['id'])) {
     header("Location: login.php");
 }
 ?>
@@ -143,32 +143,43 @@ if (!isset($_SESSION['id'])){
                             <div class="table-responsive">
                                 <table id="example" class="display min-w850">
                                     <thead>
-                                    <?php
-                                    include ("../config/dbconfig.php");
-                                    $query = $con->query("SELECT * FROM `contact`");
-                                    ?>
                                     <tr>
+                                        <th>Sl No.</th>
                                         <th>Name</th>
                                         <th>Email</th>
                                         <th>Contact No.</th>
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <tr>
-                                                <td>1</td>
-                                                <td>2</td>
-                                                <td>3</td>
-
-                                    </tr>
+                                    <?php
+                                    $slno = 0;
+                                    include("../config/dbconfig.php");
+                                    $query = $con->query("SELECT * FROM `contact`");
+                                    if ($query->num_rows > 0) {
+                                        while ($rows = $query->fetch_assoc()) {
+                                            $slno++;
+                                            ?>
+                                            <tr>
+                                                <td><?php echo $slno;?></td>
+                                                <td><?php echo $rows['name'];?></td>
+                                                <td><?php echo $rows['email'];?></td>
+                                                <td><?php echo $rows['contact_no'];?></td>
+                                            </tr>
+                                            <?php
+                                        }
+                                    }
+                                    ?>
                                     </tbody>
                                     <tfoot>
                                     <tr>
+                                        <th>Sl No.</th>
                                         <th>Name</th>
                                         <th>Email</th>
                                         <th>Contact No.</th>
                                     </tr>
                                     </tfoot>
                                 </table>
+                                <a href="export.php"><button type="button" class="btn btn-primary">Export Sheet</button></a>
                             </div>
                         </div>
                     </div>

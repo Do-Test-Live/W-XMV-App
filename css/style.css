@@ -59,7 +59,7 @@ a:focus {
 }
 
 a:hover {
-    color: #333;
+    color: #fff;
     text-decoration: none;
 }
 
@@ -112,6 +112,7 @@ input {
     border: 0;
     padding: 2px 15px;
     font-size: 14px;
+    color: white;
 }
 
 textarea {
@@ -2676,6 +2677,20 @@ margin-bottom: -35px;
     position: absolute;
     top: 57%;
     left: 57%;
+    border-radius: 15px;
+}
+
+.roadmap-btn-p-11 {
+    position: absolute;
+    bottom: -22%;
+    right: 5%;
+    border-radius: 15px;
+}
+
+.roadmap-btn-p-12 {
+    position: absolute;
+    bottom: -37%;
+    right: 5%;
     border-radius: 15px;
 }
 
