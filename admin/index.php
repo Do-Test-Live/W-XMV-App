@@ -43,7 +43,7 @@ if (isset($_SESSION['id'])){
                         <div class="col-xl-12">
                             <div class="auth-form">
                                 <div class="text-center mb-3">
-                                    <a href="#"><img src="images/logo-full.png" alt=""></a>
+                                    <a href="#"><img src="images/logo.png" alt=""></a>
                                 </div>
                                 <h4 class="text-center mb-4 text-white">Sign in your
                                     account</h4>

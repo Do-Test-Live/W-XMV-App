@@ -2,7 +2,7 @@
 
 session_start();
 if (!isset($_SESSION['id'])) {
-    header("Location: login.php");
+    header("Location: index.php");
 }
 include('../config/dbconfig.php');
 
@@ -10,7 +10,7 @@ $query = $con->query("SELECT * FROM `contact`");
 
 
 header('Content-Type: text/csv; charset=utf-8');
-header('Content-Disposition: attachment; filename=order_details' . date("_Ymdhisa") . '.csv');
+header('Content-Disposition: attachment; filename=contact_details' . date("_Ymdhisa") . '.csv');
 $output = fopen("php://output", "w");
 fputcsv($output, array('Sl No', 'Name', 'Email', 'Contact Number'));
 

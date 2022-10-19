@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['id'])) {
-    header("Location: login.php");
+    header("Location: index.php");
 }
 ?>
 <!DOCTYPE html>
@@ -65,7 +65,7 @@ if (!isset($_SESSION['id'])) {
                 <div class="collapse navbar-collapse justify-content-between">
                     <div class="header-left">
                         <div class="dashboard_bar">
-                            Datatable
+                            Contact Info
                         </div>
                     </div>
                     <ul class="navbar-nav header-right">
@@ -75,7 +75,7 @@ if (!isset($_SESSION['id'])) {
                             <a class="nav-link" href="javascript:void(0)" role="button" data-toggle="dropdown">
                                 <img src="images/profile/17.jpg" width="20" alt=""/>
                                 <div class="header-info">
-                                    <span class="text-black"><strong>Brian Lee</strong></span>
+                                    <span class="text-black"><strong>FireSamuel</strong></span>
                                     <p class="fs-12 mb-0">Admin</p>
                                 </div>
                             </a>
@@ -197,8 +197,7 @@ if (!isset($_SESSION['id'])) {
         ***********************************-->
     <div class="footer">
         <div class="copyright">
-            <p>Copyright © Designed &amp; Developed by <a href="http://dexignzone.com/" target="_blank">DexignZone</a>
-                2021</p>
+
         </div>
     </div>
     <!--**********************************

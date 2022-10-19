@@ -90,7 +90,7 @@ if($result == 1){
                 <img src="img/intro-bg.jpg" alt="image-demo">
                 <div class="caption">
                     <h4 class="text-white mb-1">Welcome to X Moment World</h4>
-                    <p class="text-white">The Virtual World</p>
+                    <p class="text-white">The Lion Zone</p>
                 </div>
             </div>
         </div>
@@ -148,10 +148,8 @@ if($result == 1){
 
                     <div class="social-media-icon">
                         <ul>
-                            <li><a href="#"><i class="icon ion-logo-facebook bg-facebook"></i></a></li>
-                            <li><a href="#"><i class="icon ion-logo-instagram bg-instagram"></i></a></li>
-                            <li><a href="#"><i class="icon ion-logo-twitter bg-twitter"></i></a></li>
-                            <li><a href="#"><i class="icon ion-logo-whatsapp bg-whatsapp"></i></a></li>
+                            <li><a href="https://www.facebook.com/XMomentWorld" target="_blank"><img src="img/facebook.png" style="height: 40px; width: 40px;"/></a></li>
+                            <li><a href="https://t.me/XmomentTech" target="_blank"><img src="img/telegram.png" style="height: 40px; width: 40px;"/></a></li>
                         </ul>
                     </div>
 
